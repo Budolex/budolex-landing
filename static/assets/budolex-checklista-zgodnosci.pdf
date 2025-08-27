@@ -1,0 +1,38 @@
+# BUDOLEX - Checklista zgodności prawnej
+
+## 📋 Prospekt informacyjny
+- [ ] Zawiera wszystkie wymagane informacje prawne
+- [ ] Format PDF/A (trwały nośnik elektroniczny)  
+- [ ] Podpis elektroniczny lub kwalifikowany
+- [ ] Wersjonowanie i datowanie zmian
+- [ ] Archiwizacja przez 7 lat
+
+## 🌐 Cennik na stronie WWW
+- [ ] Aktualne ceny wszystkich dostępnych lokali
+- [ ] Data ostatniej aktualizacji widoczna
+- [ ] Responsywność (dostosowanie mobile)
+- [ ] Spójność z materiałami reklamowymi
+- [ ] Archiwizacja historii zmian
+
+## 📤 Portal Danych
+- [ ] Codziennego eksport danych (jeśli zmiany)
+- [ ] Format XML zgodny ze schematem XSD
+- [ ] Autoryzacja certyfikatem elektronicznym  
+- [ ] Monitoring błędów i powiadomienia
+- [ ] Backup eksportowanych danych
+
+## ⚖️ MRP/DFG
+- [ ] Rachunek powierniczy prawidłowo prowadzony
+- [ ] Składki DFG płacone terminowo (do 20.)
+- [ ] Dokumentacja miesięcznych zestawień
+- [ ] Procedury współpracy z bankiem
+- [ ] Archiwizacja dokumentów DFG
+
+## 📊 Monitoring i kontrola
+- [ ] Dashboard zgodności w czasie rzeczywistym
+- [ ] Alerty o terminach i obowiązkach
+- [ ] Raporty gotowe na kontrole UOKiK
+- [ ] Procedury awaryjne zdefiniowane
+- [ ] Szkolenia zespołu przeprowadzone
+
+**Uwaga: To jest przykładowy plik PDF. W rzeczywistej implementacji byłby to pełny dokument PDF z interaktywnymi polami checkbox.**

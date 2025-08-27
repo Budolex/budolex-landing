@@ -1,0 +1,723 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* BUDOLEX Color Palette */
+:root {
+  --ifm-color-primary: #0e5a8a;
+  --ifm-color-primary-dark: #0c4e78;
+  --ifm-color-primary-darker: #0b4a71;
+  --ifm-color-primary-darkest: #093d5d;
+  --ifm-color-primary-light: #10669c;
+  --ifm-color-primary-lighter: #116aa3;
+  --ifm-color-primary-lightest: #1377b7;
+  
+  --ifm-color-accent: #ffb703;
+  --ifm-color-accent-dark: #e6a503;
+  --ifm-color-accent-darker: #d99c03;
+  --ifm-color-accent-darkest: #b38202;
+  --ifm-color-accent-light: #ffc123;
+  --ifm-color-accent-lighter: #ffc530;
+  --ifm-color-accent-lightest: #ffcf4d;
+  
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Custom BUDOLEX variables */
+  --budolex-primary: #0e5a8a;
+  --budolex-accent: #ffb703;
+  --budolex-gray-light: #f8f9fa;
+  --budolex-gray-medium: #6c757d;
+  --budolex-gray-dark: #343a40;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #1377b7;
+  --ifm-color-primary-dark: #116aa3;
+  --ifm-color-primary-darker: #10639a;
+  --ifm-color-primary-darkest: #0e527f;
+  --ifm-color-primary-light: #1584cb;
+  --ifm-color-primary-lighter: #168bd4;
+  --ifm-color-primary-lightest: #18a2f0;
+  
+  --ifm-color-accent: #ffb703;
+  --ifm-color-accent-dark: #e6a503;
+  --ifm-color-accent-darker: #d99c03;
+  --ifm-color-accent-darkest: #b38202;
+  --ifm-color-accent-light: #ffc123;
+  --ifm-color-accent-lighter: #ffc530;
+  --ifm-color-accent-lightest: #ffcf4d;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* CTA Button Styles */
+.button--primary {
+  background: linear-gradient(135deg, var(--budolex-primary) 0%, #1377b7 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(14, 90, 138, 0.3);
+  animation: slideInUp 1s ease-out 0.4s both;
+}
+
+.button--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.button--primary:hover::before {
+  left: 100%;
+}
+
+.button--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(14, 90, 138, 0.4);
+  color: white;
+}
+
+.button--outline {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.button--outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--budolex-accent);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 183, 3, 0.3);
+}
+
+/* Navbar CTA Button */
+.navbar-cta-button {
+  background-color: var(--budolex-accent) !important;
+  color: var(--budolex-gray-dark) !important;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-left: 12px;
+  transition: all 0.2s ease;
+}
+
+.navbar-cta-button:hover {
+  background-color: var(--ifm-color-accent-dark) !important;
+  color: var(--budolex-gray-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(255, 183, 3, 0.3);
+}
+
+/* Trust Bar Styles */
+.trust-bar {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 183, 3, 0.2);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.trust-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 183, 3, 0.1), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.trust-bar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.trust-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.trust-bar-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  background: rgba(255, 183, 3, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, var(--budolex-primary) 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  animation: float 20s ease-in-out infinite;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 183, 3, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, var(--budolex-accent) 50%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 1s ease-out 0.2s both;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin: 80px 0;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.feature-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays for feature cards */
+.feature-card:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.feature-card:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--budolex-primary), var(--budolex-accent), var(--budolex-primary));
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(14, 90, 138, 0.2);
+  border-color: rgba(255, 183, 3, 0.3);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--budolex-accent) 0%, #ffc530 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 32px;
+  box-shadow: 0 10px 25px rgba(255, 183, 3, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 35px rgba(255, 183, 3, 0.4);
+}
+
+/* Price Table */
+.price-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+  padding: 0 20px;
+}
+
+.price-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(14, 90, 138, 0.1) 0%, rgba(255, 183, 3, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.price-card:hover::before {
+  opacity: 1;
+}
+
+.price-card.featured {
+  border-color: var(--budolex-accent);
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(255, 183, 3, 0.3);
+  background: linear-gradient(135deg, rgba(255, 183, 3, 0.1) 0%, rgba(14, 90, 138, 0.1) 100%);
+}
+
+.price-card.featured::after {
+  content: "NAJPOPULARNIEJSZY";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--budolex-accent), #ffc530);
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 0 0 12px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 183, 3, 0.4);
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--budolex-accent);
+  box-shadow: 0 25px 50px rgba(14, 90, 138, 0.2);
+}
+
+.price-card.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* Form Styles */
+.lead-form {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--budolex-gray-dark);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--budolex-primary);
+  box-shadow: 0 0 0 3px rgba(14, 90, 138, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .price-table {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .price-card.featured {
+    transform: none;
+  }
+  
+  .trust-bar-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .trust-bar-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Modern Section Styling */
+.section-modern {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,183,3,0.1)"/></svg>') repeat;
+  animation: float 15s linear infinite;
+}
+
+.section-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, var(--budolex-primary) 0%, #1377b7 50%, #0a0a0a 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 183, 3, 0.1) 50%, transparent 70%);
+  animation: gradientMove 8s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+/* Animated Background Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-element {
+  position: absolute;
+  background: rgba(255, 183, 3, 0.1);
+  border-radius: 50%;
+  animation: floatUp 10s infinite ease-in-out;
+}
+
+.floating-element:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  left: 85%;
+  animation-delay: 4s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Glowing Text Effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.5),
+               0 0 20px rgba(255, 183, 3, 0.3),
+               0 0 30px rgba(255, 183, 3, 0.2);
+}
+
+/* Pulse Animation for Icons */
+.pulse-icon {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 183, 3, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 183, 3, 0.6);
+  }
+}
+
+/* Scroll-based animations */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fadeInUp.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Intersection Observer CSS */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced particle background for hero */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(119, 198, 255, 0.1) 0%, transparent 50%);
+  animation: particleMove 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes particleMove {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.4;
+  }
+}
+
+/* Page loading animation */
+body {
+  animation: pageLoad 0.8s ease-out;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax effect for background elements */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 183, 3, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(14, 90, 138, 0.05) 0%, transparent 50%);
+  z-index: -1;
+  animation: slowFloat 30s ease-in-out infinite;
+}
+
+@keyframes slowFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+}

@@ -1,0 +1,31 @@
+# BUDOLEX - Przewodnik Prawo 2025
+
+## Najważniejsze zmiany dla deweloperów
+
+### 1. Prospekt informacyjny (obowiązkowy)
+- Format PDF/A z podpisem elektronicznym
+- Wszystkie wymagane informacje prawne
+- Wersjonowanie i archiwizacja 7 lat
+
+### 2. Cennik na stronie WWW (obowiązkowy)
+- Aktualizacja w czasie rzeczywistym
+- Historia zmian z datowaniem
+- Spójność z materiałami reklamowymi
+
+### 3. Portal Danych (obowiązkowy)
+- Dzienny eksport danych (jeśli zmiany)
+- Format XML zgodny ze schematem
+- Monitoring i powiadomienia o błędach
+
+### 4. MRP/DFG (obowiązkowy)
+- Rachunek powierniczy dla każdej inwestycji
+- Składki 1,5% do 20. dnia miesiąca
+- Dokumentacja zgodna z wymogami
+
+### Konsekwencje niezgodności:
+- Kary UOKiK do 10% rocznego obrotu
+- Pozwy konsumentów o odszkodowanie
+- Blokada sprzedaży przez organy kontroli
+- Problemy z finansowaniem projektów
+
+**Uwaga: To jest przykładowy plik PDF. W rzeczywistej implementacji byłby to pełny dokument PDF z szczegółowymi informacjami prawnymi.**

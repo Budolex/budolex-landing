@@ -1,0 +1,296 @@
+---
+title: 14-dniowy bezpłatny trial
+description: Rozpocznij 14-dniowy bezpłatny trial BUDOLEX. Przetestuj wszystkie funkcje bez zobowiązań i karty kredytowej.
+---
+
+import Head from '@docusaurus/Head';
+import Link from '@docusaurus/Link';
+import LeadCaptureForm from '../components/LeadCaptureForm';
+
+<Head>
+  <title>14-dniowy bezpłatny trial - BUDOLEX</title>
+  <meta name="description" content="Rozpocznij 14-dniowy trial BUDOLEX. Pełen dostęp do wszystkich funkcji bez karty kredytowej. Przekonaj się o korzyściach już dziś." />
+</Head>
+
+<div className="container margin-vert--lg">
+  <div className="row">
+    <div className="col col--12 text--center margin-bottom--lg">
+      <h1>🚀 Rozpocznij 14-dniowy bezpłatny trial</h1>
+      <p className="hero-subtitle">
+        Przetestuj wszystkie funkcje BUDOLEX przez 14 dni całkowicie za darmo. 
+        Bez karty kredytowej, bez zobowiązań, bez ukrytych kosztów.
+      </p>
+    </div>
+  </div>
+
+  <div className="row">
+    <div className="col col--6">
+      <div className="feature-card">
+        <h2>Co otrzymujesz w trial?</h2>
+        
+        <div style={{ marginBottom: '24px' }}>
+          <h4>✅ Pełny dostęp do systemu</h4>
+          <ul>
+            <li>Generator prospektów informacyjnych</li>
+            <li>Zarządzanie cennikiem WWW</li>
+            <li>Eksport do Portalu Danych (test)</li>
+            <li>MRP/DFG Console (demo data)</li>
+          </ul>
+        </div>
+
+        <div style={{ marginBottom: '24px' }}>
+          <h4>✅ Wsparcie onboarding</h4>
+          <ul>
+            <li>30-minutowe szkolenie wprowadzające</li>
+            <li>Import przykładowych danych</li>
+            <li>Osobisty opiekun przez trial</li>
+            <li>Email support (odpowiedź w 4h)</li>
+          </ul>
+        </div>
+
+        <div style={{ marginBottom: '24px' }}>
+          <h4>✅ Bez zobowiązań</h4>
+          <ul>
+            <li>Nie wymagamy karty kredytowej</li>
+            <li>Możesz anulować w każdym momencie</li>
+            <li>Eksport danych przed zakończeniem</li>
+            <li>Brak automatycznych płatności</li>
+          </ul>
+        </div>
+
+        <div style={{ 
+          backgroundColor: '#f8f9fa', 
+          padding: '16px', 
+          borderRadius: '8px',
+          marginTop: '24px'
+        }}>
+          <h4>⏰ Co się stanie po 14 dniach?</h4>
+          <p>
+            <strong>Opcja 1:</strong> Wybierasz płatny plan i kontynuujesz z pełnym dostępem<br/>
+            <strong>Opcja 2:</strong> Nie robisz nic - konto zostaje dezaktywowane bez kosztów<br/>
+            <strong>Opcja 3:</strong> Przedłużasz trial o kolejne 7 dni (jednorazowo)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="col col--6">
+      <div className="feature-card">
+        <h3>Załóż konto trial</h3>
+        <p>Wypełnij formularz, a wyślemy Ci dane dostępowe w ciągu 15 minut:</p>
+        
+        <form 
+          name="trial" 
+          method="POST" 
+          data-netlify="true" 
+          netlify-honeypot="bot-field"
+          action="/dziekujemy"
+          style={{ marginTop: '24px' }}
+        >
+          <input type="hidden" name="form-name" value="trial" />
+          <div style={{ display: 'none' }}>
+            <label>
+              Don't fill this out: <input name="bot-field" />
+            </label>
+          </div>
+          
+          <div className="form-group">
+            <label htmlFor="trial-name">Imię i nazwisko *</label>
+            <input
+              type="text"
+              id="trial-name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="trial-email">Email firmowy *</label>
+            <input
+              type="email"
+              id="trial-email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="trial-phone">Telefon</label>
+            <input
+              type="tel"
+              id="trial-phone"
+              name="phone"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="trial-company">Nazwa firmy *</label>
+            <input
+              type="text"
+              id="trial-company"
+              name="company"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="trial-size">Rozmiar firmy</label>
+            <select id="trial-size" name="company_size">
+              <option value="">Wybierz rozmiar firmy</option>
+              <option value="mikro">Mikro (1-5 lokali/mies)</option>
+              <option value="msp">MŚP (6-25 lokali/mies)</option>
+              <option value="duza">Duża (25+ lokali/mies)</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="trial-plan">Interesujący plan</label>
+            <select id="trial-plan" name="interested_plan">
+              <option value="">Który plan Cię interesuje?</option>
+              <option value="starter">Starter (2,500 zł/mies)</option>
+              <option value="pro">Pro (4,500 zł/mies)</option>
+              <option value="white-glove">White-glove (indywidualnie)</option>
+              <option value="nie-wiem">Nie wiem - pomóżcie wybrać</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                name="trial_consent"
+                required
+              />
+              <span className="checkmark"></span>
+              Wyrażam zgodę na przetwarzanie danych osobowych w celu założenia konta trial 
+              zgodnie z <a href="/polityka-prywatnosci" target="_blank">polityką prywatności</a>. *
+            </label>
+          </div>
+
+          <div className="form-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                name="marketing_consent"
+              />
+              <span className="checkmark"></span>
+              Chcę otrzymywać informacje o aktualizacjach prawnych i nowościach w BUDOLEX (opcjonalnie).
+            </label>
+          </div>
+
+          <button type="submit" className="button button--primary button--lg" style={{ width: '100%' }}>
+            Rozpocznij bezpłatny trial
+          </button>
+        </form>
+
+        <div style={{ 
+          textAlign: 'center', 
+          marginTop: '24px',
+          fontSize: '14px',
+          color: '#666'
+        }}>
+          Dane dostępowe otrzymasz na email w ciągu 15 minut.<br/>
+          Problemy? Napisz na <a href="mailto:trial@budolex.pl">trial@budolex.pl</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="row margin-top--xl">
+    <div className="col col--12">
+      <div className="feature-card">
+        <h2>Dlaczego warto spróbować?</h2>
+        
+        <div className="row">
+          <div className="col col--3 text--center">
+            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🎯</div>
+            <h4>Sprawdź realną wartość</h4>
+            <p>Zobacz ile czasu i pieniędzy zaoszczędzisz dzięki automatyzacji zgodności prawnej.</p>
+          </div>
+          <div className="col col--3 text--center">
+            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>🛡️</div>
+            <h4>Zredukuj ryzyko prawne</h4>
+            <p>Przetestuj jak BUDOLEX zabezpiecza przed karami UOKiK i problemami z kontrolami.</p>
+          </div>
+          <div className="col col--3 text--center">
+            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>⚡</div>
+            <h4>Przyspiesz procesy</h4>
+            <p>Sprawdź jak szybko wygenerujesz prospekt i zaktualizujesz cennik na stronie.</p>
+          </div>
+          <div className="col col--3 text--center">
+            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>👥</div>
+            <h4>Poznaj zespół</h4>
+            <p>Przetestuj jakość naszego wsparcia i zobacz czy to odpowiedni partner dla Ciebie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="row margin-top--xl">
+    <div className="col col--8 col--offset-2">
+      <div style={{ 
+        backgroundColor: '#0e5a8a', 
+        color: 'white', 
+        padding: '32px', 
+        borderRadius: '12px',
+        textAlign: 'center'
+      }}>
+        <h3>🤝 Gwarancja satysfakcji</h3>
+        <p>
+          Jeśli w ciągu pierwszych 30 dni płatnej subskrypcji nie będziesz zadowolony 
+          z BUDOLEX, zwrócimy Ci 100% opłaty bez zadawania pytań.
+        </p>
+        <small>Warunki zwrotu określa regulamin świadczenia usług</small>
+      </div>
+    </div>
+  </div>
+
+  <div className="row margin-top--xl">
+    <div className="col col--12 text--center">
+      <h2>Często zadawane pytania o trial</h2>
+      
+      <div className="row">
+        <div className="col col--6">
+          <div className="feature-card" style={{ textAlign: 'left' }}>
+            <h4>❓ Czy trial ma wszystkie funkcje?</h4>
+            <p>
+              Tak, masz dostęp do pełnej funkcjonalności wszystkich planów. 
+              Jedyne ograniczenie to ilość danych (do 5 lokali testowych).
+            </p>
+          </div>
+        </div>
+        <div className="col col--6">
+          <div className="feature-card" style={{ textAlign: 'left' }}>
+            <h4>❓ Czy mogę przedłużyć trial?</h4>
+            <p>
+              Tak, jednorazowo możesz przedłużyć trial o kolejne 7 dni. 
+              W uzasadnionych przypadkach możemy rozważyć dłuższe przedłużenie.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="row">
+        <div className="col col--6">
+          <div className="feature-card" style={{ textAlign: 'left' }}>
+            <h4>❓ Co się stanie z moimi danymi?</h4>
+            <p>
+              Po zakończeniu trial dane są przechowywane 90 dni. Możesz je 
+              eksportować lub rozpocząć płatną subskrypcję aby kontynuować.
+            </p>
+          </div>
+        </div>
+        <div className="col col--6">
+          <div className="feature-card" style={{ textAlign: 'left' }}>
+            <h4>❓ Czy będę otrzymywać spam?</h4>
+            <p>
+              Nie. Wyślemy tylko dane dostępowe, przypomnienie przed końcem 
+              trial i opcjonalnie newsletter (jeśli wyrazisz zgodę).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+/* HUMANSTXT.ORG */
+
+/* TEAM */
+Product Owner: BUDOLEX Team
+Contact: kontakt@budolex.pl
+Location: Warszawa, Polska
+
+/* THANKS */
+Docusaurus Community
+React Community
+Open Source Contributors
+
+/* SITE */
+Last update: 2025/08/27
+Standards: HTML5, CSS3, JavaScript ES6+, React 19
+Components: Docusaurus 3.8.1
+Software: VS Code, Git, NPM
+Hosting: Netlify/Vercel
+Analytics: Google Analytics 4

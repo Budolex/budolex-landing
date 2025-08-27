@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://budolex.pl/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow sensitive areas (if any in the future)
+# Disallow: /admin/
+# Disallow: /private/
