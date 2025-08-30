@@ -40,7 +40,7 @@ export default function Contact(): React.JSX.Element {
               <div style={{ marginBottom: '24px' }}>
                 <h4>📞 Telefon</h4>
                 <p>
-                  <a href="tel:+48123456789">+48 123 456 789</a><br />
+                  <a href="tel:+48502091059">+48 502 091 059</a><br />
                   <small>Pon-Pt: 9:00-17:00</small>
                 </p>
               </div>
@@ -48,10 +48,10 @@ export default function Contact(): React.JSX.Element {
               <div style={{ marginBottom: '24px' }}>
                 <h4>🏢 Adres</h4>
                 <p>
-                  BUDOLEX Sp. z o.o.<br />
-                  ul. Przykładowa 123<br />
-                  00-001 Warszawa<br />
-                  <small>NIP: 1234567890</small>
+                  AGADOM Sp. z o.o.<br />
+                  Elżbiety Drużbackiej 136<br />
+                  30-699 Kraków<br />
+                  <small>NIP: 6793287174 | KRS: 0001078988</small>
                 </p>
               </div>
 
@@ -165,7 +165,7 @@ export default function Contact(): React.JSX.Element {
             <div className="feature-card">
               <h4>🔒 Jak przetwarzamy Twoje dane</h4>
               <ul>
-                <li><strong>Administrator:</strong> BUDOLEX Sp. z o.o.</li>
+                <li><strong>Administrator:</strong> AGADOM Sp. z o.o.</li>
                 <li><strong>Cel:</strong> Udzielenie odpowiedzi na zapytanie i nawiązanie współpracy</li>
                 <li><strong>Podstawa prawna:</strong> Zgoda (art. 6 ust. 1 lit. a RODO)</li>
                 <li><strong>Okres przechowywania:</strong> 3 lata lub do odwołania zgody</li>

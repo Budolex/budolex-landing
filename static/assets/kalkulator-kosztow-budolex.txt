@@ -1,0 +1,39 @@
+# BUDOLEX - Kalkulator kosztów
+
+## Jak obliczyć koszty BUDOLEX dla Twojej inwestycji?
+
+### Dane inwestycji:
+- Liczba mieszkań: ___
+- Przewidywany czas sprzedaży (miesiące): ___
+- Czy masz 5+ inwestycji równoczesnych? TAK/NIE
+
+### Kalkulacja kosztów:
+
+#### Plan Standardowy:
+- Opłata jednorazowa: 15,000 zł
+- Opłata miesięczna: 500 zł × __ miesięcy = __ zł
+- **ŁĄCZNIE: __ zł**
+- **Koszt na mieszkanie: __ zł**
+
+#### Plan Premium (przy 5+ inwestycjach):
+- Opłata jednorazowa: 12,000 zł
+- Opłata miesięczna: 400 zł × __ miesięcy = __ zł
+- **ŁĄCZNIE: __ zł**
+- **Koszt na mieszkanie: __ zł**
+- **OSZCZĘDNOŚĆ vs Standardowy: __ zł**
+
+### Przykłady kalkulacji:
+
+1. **Małe osiedle** (30 mieszkań, 12 miesięcy):
+   - Standardowy: 21,000 zł (700 zł/mieszkanie)
+
+2. **Średnie osiedle** (80 mieszkań, 18 miesięcy):
+   - Standardowy: 24,000 zł (300 zł/mieszkanie)
+
+3. **Duży deweloper** (5 osiedli, 24 miesiące każde):
+   - Premium: 108,000 zł (oszczędność: 27,000 zł)
+
+### Kontakt:
+Tel: +48 502 091 059
+Email: kontakt@budolex.pl
+Adres: Elżbiety Drużbackiej 136, 30-699 Kraków

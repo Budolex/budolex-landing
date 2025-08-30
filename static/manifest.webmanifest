@@ -1,7 +1,7 @@
 {
   "name": "BUDOLEX",
   "short_name": "BUDOLEX",
-  "description": "Zgodność prawna dla firm budowlanych: Prospekt, Cennik WWW, Portal Danych, MRP/DFG",
+  "description": "Strony WWW z integracją gov.pl, prospekty prawne i email z przekierowaniem dla deweloperów",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#0e5a8a",

@@ -13,54 +13,42 @@ interface PricePlan {
 
 const plans: PricePlan[] = [
   {
-    name: 'Starter',
-    price: '2,500 zł/mies',
-    description: 'Dla mikrofirm (do 5 lokali/mies)',
+    name: 'Standard',
+    price: '12,000 zł + 400 zł/mies',
+    description: 'Kompletny pakiet dla każdej inwestycji - rabat 20% wliczony',
     features: [
-      'Generator prospektu PDF/A',
-      'Widget cennik na WWW',
-      'Export do Portalu Danych (1x/dobę)',
-      'Email support (48h)',
-      'Dokumentacja zgodności',
-      'Podstawowe szablony prospektów'
-    ],
-    ctaText: 'Umów konsultację',
-    ctaLink: '/kontakt'
-  },
-  {
-    name: 'Pro',
-    price: '4,500 zł/mies',
-    description: 'Dla MŚP (do 25 lokali/mies)',
-    features: [
-      'Wszystko z planu Starter',
-      'MRP/DFG Console pełna',
-      'Dedykowany opiekun klienta',
-      'SLA 24h (wsparcie)',
-      'Szkolenia zespołu sprzedaży',
-      'Zaawansowane raporty zgodności',
-      'Integracja z CRM',
-      'Backup i archiwizacja'
+      '🌐 Strona WWW z integracją gov.pl dla inwestycji',
+      '📋 Prospekt stworzony przez nasz zespół prawników',
+      '📧 Email z przekierowaniem (niewidoczny dla klientów)',
+      '👤 Dedykowany opiekun klienta',
+      '🔗 Integracja z portalami rządowymi',
+      '⚡ Priorytetowe wsparcie (SLA 4h)',
+      '📞 Miesięczne konsultacje prawne (2h gratis)',
+      '📊 Zaawansowane raporty zgodności',
+      '💾 Backup i archywizacja danych'
     ],
     featured: true,
-    ctaText: 'Wybierz Pro',
-    ctaLink: '/kontakt'
+    ctaText: 'Wybierz Standard',
+    ctaLink: '#konsultacja'
   },
   {
-    name: 'White-glove',
-    price: 'Indywidualnie',
-    description: 'Dla firm bez działu IT',
+    name: 'White Glove',
+    price: 'Wycena indywidualna',
+    description: 'Pełen serwis premium dla wymagających klientów',
     features: [
-      'Wszystko z planu Pro',
-      'Pełne outsourcing IT zgodności',
-      'Dedykowany zespół prawno-techniczny',
-      'SLA 4h (krytyczne problemy)',
-      'Miesięczne konsultacje prawne',
-      'Reprezentacja podczas kontroli',
-      'Dostosowane procesy zgodności',
-      'Priorytetowe wsparcie'
+      'Wszystko z pakietu Standard',
+      '🏠 Wizualizacje 3D na stronie WWW',
+      '🏷️ Rozwiązanie white-label (Twoja marka)',
+      '⚡ Najwyższy priorytet wsparcia (SLA 2h)',
+      '🎨 Niestandardowe dostosowania UI/UX',
+      '👥 Dedykowany zespół prawno-techniczny',
+      '🔧 Integracja z Twoimi systemami',
+      '📈 Zaawansowana analityka sprzedaży',
+      '🛡️ Gwarancja zgodności 100%',
+      '📞 Nielimitowane konsultacje prawne'
     ],
     ctaText: 'Skontaktuj się',
-    ctaLink: '/kontakt'
+    ctaLink: '#konsultacja'
   }
 ];
 

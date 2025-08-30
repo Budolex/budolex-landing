@@ -12,42 +12,32 @@ import ScrollAnimations from '../components/ScrollAnimations';
 
 const FeaturesList = [
   {
-    title: 'Generator Prospektu',
+    title: 'Strony WWW z integracją gov',
+    icon: '🌐',
+    description: (
+      <>
+        Tworzymy profesjonalną stronę internetową dla każdej inwestycji
+        z automatyczną integracją z portalami gov.pl i CMS do zarządzania.
+      </>
+    ),
+  },
+  {
+    title: 'Prospekty tworzone przez prawników',
     icon: '📋',
     description: (
       <>
-        Automatyczne generowanie prospektów zgodnych z prawem w formacie PDF/A 
+        Nasz zespół prawników tworzy zgodne z prawem prospekty w formacie PDF/A
         z pełnym wersjonowaniem i trwałym nośnikiem elektronicznym.
       </>
     ),
   },
   {
-    title: 'Widget „Prospekt & Cennik" na WWW',
-    icon: '🌐',
+    title: 'Email z przekierowaniem',
+    icon: '�',
     description: (
       <>
-        Dynamiczny widget na Twojej stronie WWW z historią zmian, datowaniem 
-        i spójnością z materiałami reklamowymi.
-      </>
-    ),
-  },
-  {
-    title: 'Export do Portalu Danych',
-    icon: '📤',
-    description: (
-      <>
-        Automatyczny dzienny eksport danych do Portalu Danych z monitoringiem 
-        błędów i powiadomieniami o statusie.
-      </>
-    ),
-  },
-  {
-    title: 'Konsola MRP/DFG',
-    icon: '⚖️',
-    description: (
-      <>
-        Zarządzanie składkami, rejestrami i zgodnością MRP/DFG. 
-        Gotowe pliki dla notariusza i księgi wieczystej.
+        Obsługa email niewidoczna dla klientów - zapytania automatycznie
+        przekierowywane do Twojej skrzynki z dedykowanym opiekunem.
       </>
     ),
   },
@@ -78,11 +68,11 @@ function HomepageHeader() {
       </div>
       <div className="container">
         <h1 className="hero-title glow-text">
-          BUDOLEX — zgodność sprzedaży mieszkań
+          BUDOLEX — strony WWW + prospekty + zgodność
         </h1>
         <p className="hero-subtitle">
-          Prospekt, transparentny cennik WWW, dzienny eksport do portalu danych 
-          oraz MRP/DFG — wszystko w jednym wdrożeniu.
+          Strony WWW z integracją gov.pl, prospekty tworzone przez prawników i
+          email z przekierowaniem — wszystko w jednym pakiecie.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -92,8 +82,8 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--outline button--lg margin-left--md"
-            to="/assets/budolex-checklista-zgodnosci.pdf">
-            Pobierz checklistę zgodności (PDF)
+            to="/prawo-2025">
+            Pobierz przewodnik prawny 2025 (PDF)
           </Link>
         </div>
       </div>
@@ -131,20 +121,20 @@ function ProcessSection() {
           <div className="col col--4 text--center">
             <div className="feature-card">
               <div className="feature-icon">🔍</div>
-              <h3>1. Audyt</h3>
+              <h3>1. Analiza</h3>
               <p>
-                Analiza obecnego stanu zgodności, identyfikacja luk prawnych 
-                i przygotowanie planu wdrożenia (1-2 tygodnie).
+                Audyt obecnej sytuacji, analiza potrzeb strony WWW i komunikacji email. 
+                Projektujemy rozwiązanie dopasowane do Twojej inwestycji (3-5 dni).
               </p>
             </div>
           </div>
           <div className="col col--4 text--center">
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
-              <h3>2. Wdrożenie</h3>
+              <h3>2. Tworzenie</h3>
               <p>
-                Konfiguracja systemów, integracja z Twoją WWW, 
-                testy i szkolenie zespołu (1-2 tygodnie).
+                Budujemy dedykowaną stronę WWW, tworzymy zgodny prospekt prawny,
+                konfigurujemy obsługę email i systemy zgodności (5-7 dni).
               </p>
             </div>
           </div>
@@ -153,8 +143,8 @@ function ProcessSection() {
               <div className="feature-icon">🛡️</div>
               <h3>3. Utrzymanie</h3>
               <p>
-                Miesięczne monitoring zgodności, aktualizacje prawne 
-                i wsparcie techniczne w ramach SLA.
+                Miesięczne utrzymanie strony, monitoring zgodności, obsługa email
+                i wsparcie techniczne przez cały okres sprzedaży.
               </p>
             </div>
           </div>
@@ -172,16 +162,16 @@ function MiniCaseSection() {
           <div className="col col--8 col--offset-2 text--center">
             <h2>Przypadek klienta</h2>
             <div className="feature-card">
-              <h3>SMB deweloper — wdrożenie w 21 dni, 0 uwag z UOKiK</h3>
+              <h3>SMB deweloper — wdrożenie w 10 dni, 0 uwag z UOKiK</h3>
               <p>
                 Firma developerska z 15-osobowym zespołem sprzedaży, 
-                realizująca 3 inwestycje rocznie. Po wdrożeniu BUDOLEX 
+                realizująca 3 inwestycje rocznie. Po błyskawicznym wdrożeniu BUDOLEX 
                 otrzymała pełną zgodność prawną bez jednej uwagi podczas 
                 kontroli UOKiK.
               </p>
               <div style={{marginTop: '24px'}}>
                 <strong>Rezultat:</strong> Redukcja ryzyka prawnego o 95%, 
-                oszczędność 40 godzin miesięcznie zespołu prawnego.
+                oszczędność 40 godzin miesięcznie zespołu prawnego, profesjonalne strony WWW.
               </div>
             </div>
           </div>
@@ -199,55 +189,42 @@ function PricingPreview() {
           <div className="col col--12 text--center margin-bottom--lg">
             <h2>Cennik</h2>
             <p className="hero-subtitle">
-              Elastyczne plany dostosowane do rozmiaru Twojej firmy
+              Jeden plan Standard dla wszystkich + opcjonalny White Glove
             </p>
           </div>
         </div>
         <div className="row">
-          <div className="col col--4 text--center">
-            <div className="price-card">
-              <h3>Starter</h3>
-              <div style={{fontSize: '2rem', fontWeight: 'bold', margin: '16px 0'}}>
-                2,500 zł<span style={{fontSize: '1rem'}}>/mies</span>
-              </div>
-              <p>Dla mikrofirm (do 5 lokali/mies)</p>
-              <ul style={{textAlign: 'left', margin: '16px 0'}}>
-                <li>Generator prospektu</li>
-                <li>Widget cennik WWW</li>
-                <li>Export Portal Danych</li>
-                <li>Email support</li>
-              </ul>
-            </div>
-          </div>
-          <div className="col col--4 text--center">
+          <div className="col col--6 text--center">
             <div className="price-card featured">
-              <h3>Pro</h3>
-              <div style={{fontSize: '2rem', fontWeight: 'bold', margin: '16px 0'}}>
-                4,500 zł<span style={{fontSize: '1rem'}}>/mies</span>
+              <h3>Standard</h3>
+              <div style={{fontSize: '1.8rem', fontWeight: 'bold', margin: '16px 0'}}>
+                12,000 zł<span style={{fontSize: '1rem', display: 'block'}}>+ 400 zł/mies</span>
               </div>
-              <p>Dla MŚP (do 25 lokali/mies)</p>
+              <p>Kompletny pakiet z rabatem 20% wliczonym</p>
               <ul style={{textAlign: 'left', margin: '16px 0'}}>
-                <li>Wszystko z planu Starter</li>
-                <li>MRP/DFG Console</li>
-                <li>Dedykowany opiekun</li>
-                <li>SLA 24h</li>
-                <li>Szkolenia zespołu</li>
+                <li>🌐 Dedykowana strona WWW</li>
+                <li>📋 Prospekt przez prawników</li>
+                <li>📧 Email z przekierowaniem</li>
+                <li>👤 Dedykowany opiekun</li>
+                <li>⚡ Wsparcie SLA 4h</li>
+                <li>📞 Konsultacje prawne</li>
               </ul>
             </div>
           </div>
-          <div className="col col--4 text--center">
+          <div className="col col--6 text--center">
             <div className="price-card">
-              <h3>White-glove</h3>
-              <div style={{fontSize: '2rem', fontWeight: 'bold', margin: '16px 0'}}>
-                Indywidualnie
+              <h3>White Glove</h3>
+              <div style={{fontSize: '1.8rem', fontWeight: 'bold', margin: '16px 0'}}>
+                Wycena<span style={{fontSize: '1rem', display: 'block'}}>indywidualna</span>
               </div>
-              <p>Dla firm bez działu IT</p>
+              <p>Pełen serwis premium</p>
               <ul style={{textAlign: 'left', margin: '16px 0'}}>
-                <li>Wszystko z planu Pro</li>
-                <li>Pełne outsourcing IT</li>
-                <li>Dedykowany zespół</li>
-                <li>SLA 4h</li>
-                <li>Konsultacje prawne</li>
+                <li>Wszystko ze Standard</li>
+                <li>🏠 Wizualizacje 3D</li>
+                <li>🏷️ White-label branding</li>
+                <li>⚡ Wsparcie SLA 2h</li>
+                <li>🎨 Custom UI/UX</li>
+                <li>👥 Dedykowany zespół</li>
               </ul>
             </div>
           </div>
@@ -268,7 +245,7 @@ function FAQPreview() {
   const faqs = [
     {
       question: 'Czy BUDOLEX zapewnia pełną zgodność z ustawą 2021/2025?',
-      answer: 'Tak, nasze rozwiązanie w 100% pokrywa wymagania ustawy, w tym prospekt informacyjny, cennik na WWW, dzienny eksport do Portalu Danych oraz obsługę MRP/DFG.'
+      answer: 'Tak, nasze rozwiązanie w 100% pokrywa wymagania ustawy, w tym prospekt informacyjny, strony WWW z integracją gov.pl i obsługę komunikacji email.'
     },
     {
       question: 'Jak długo trwa wdrożenie?',
@@ -321,26 +298,31 @@ export default function Home(): React.JSX.Element {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "BUDOLEX",
-    "description": "Zgodność prawna dla firm budowlanych: Prospekt, Cennik WWW, Portal Danych, MRP/DFG",
+    "name": "BUDOLEX - AGADOM Sp. z o.o.",
+    "description": "Strony WWW z integracją gov.pl, prospekty prawne i email z przekierowaniem dla deweloperów",
     "url": "https://budolex.pl",
-    "telephone": "+48 123 456 789",
+    "telephone": "+48 502 091 059",
     "email": "kontakt@budolex.pl",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Elżbiety Drużbackiej 136",
+      "addressLocality": "Kraków",
+      "postalCode": "30-699",
       "addressCountry": "PL",
       "addressRegion": "Polska"
     },
     "areaServed": "Polska",
     "serviceType": "Usługi zgodności prawnej dla firm budowlanych",
-    "priceRange": "2500-10000 PLN",
-    "openingHours": "Mo-Fr 09:00-17:00"
+    "priceRange": "15000 PLN",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "vatID": "6793287174",
+    "legalName": "AGADOM SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ"
   };
 
   return (
     <Layout
-      title="Zgodność prawna dla firm budowlanych"
-      description="BUDOLEX - Prospekt, cennik WWW, portal danych, MRP/DFG. Kompleksowe rozwiązania zgodności dla deweloperów.">
+      title="Strony WWW + Prospekty + Zgodność dla deweloperów"
+      description="BUDOLEX - Strony WWW z integracją gov.pl dla inwestycji, prospekty tworzone przez prawników i email z przekierowaniem w jednym pakiecie.">
       <Head>
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}

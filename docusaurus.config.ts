@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'BUDOLEX',
-  tagline: 'Zgodność prawna dla firm budowlanych: Prospekt, Cennik WWW, Portal Danych, MRP/DFG.',
+  tagline: 'Strony WWW z integracją gov.pl, prospekty prawne i email z przekierowaniem dla deweloperów.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -40,25 +40,13 @@ const config: Config = {
     [
       'classic',
       {
-        docs: false, // Disable docs for now as per instructions
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Remove edit links
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+        docs: {
+          sidebarPath: './sidebars.ts',
+          editUrl: 'https://github.com/budolex/budolex-landing/tree/main/',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
-        },
-        sitemap: {
-          changefreq: 'weekly' as const,
-          priority: 0.5,
         },
       } satisfies Preset.Options,
     ],
@@ -109,7 +97,7 @@ const config: Config = {
     metadata: [
       {
         name: 'description',
-        content: 'BUDOLEX - Zgodność prawna dla firm budowlanych. Prospekt, cennik WWW, portal danych, MRP/DFG. Kompleksowe rozwiązania zgodności dla deweloperów.',
+        content: 'BUDOLEX - Strony WWW z integracją gov.pl dla deweloperów. Prospekty prawne, email z przekierowaniem. Kompleksowe rozwiązania zgodności.',
       },
       {
         property: 'og:title',
@@ -117,7 +105,7 @@ const config: Config = {
       },
       {
         property: 'og:description',
-        content: 'Prospekt, cennik WWW, portal danych, MRP/DFG. Kompleksowe rozwiązania zgodności dla deweloperów.',
+        content: 'Strony WWW z integracją gov.pl, prospekty prawne i email z przekierowaniem. Kompleksowe rozwiązania zgodności dla deweloperów.',
       },
     ],
     navbar: {
@@ -133,7 +121,6 @@ const config: Config = {
         {to: '/cennik', label: 'Cennik', position: 'left'},
         {to: '/prawo-2025', label: 'Prawo 2025', position: 'left'},
         {to: '/faq', label: 'FAQ', position: 'left'},
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           to: '/kontakt',
           label: 'Kontakt',
@@ -149,20 +136,16 @@ const config: Config = {
           title: 'Usługi',
           items: [
             {
-              label: 'Generator Prospektu',
-              to: '/uslugi#generator-prospektu',
+              label: 'Strony WWW z integracją gov',
+              to: '/uslugi#strony-www',
             },
             {
-              label: 'Widget WWW',
-              to: '/uslugi#widget-www',
+              label: 'Prospekty prawne',
+              to: '/uslugi#prospekty-prawne',
             },
             {
-              label: 'Export do Portalu Danych',
-              to: '/uslugi#export-portal',
-            },
-            {
-              label: 'MRP/DFG Console',
-              to: '/uslugi#mrp-dfg',
+              label: 'Email z przekierowaniem',
+              to: '/uslugi#email-przekierowanie',
             },
           ],
         },
@@ -195,17 +178,13 @@ const config: Config = {
               to: '/kontakt',
             },
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'Cennik',
               to: '/cennik',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} BUDOLEX. Wszystkie prawa zastrzeżone.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AGADOM Sp. z o.o. | NIP: 6793287174 | KRS: 0001078988<br/>Elżbiety Drużbackiej 136, 30-699 Kraków | Tel: +48 502 091 059`,
     },
     prism: {
       theme: prismThemes.github,
