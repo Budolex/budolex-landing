@@ -6,7 +6,7 @@ Zadania: brand, nawigacja, strony PL, komponenty (Cennik, Lead Form), SEO/analit
 - Zmień `docusaurus.config.ts`:
   - title: 'BUDOLEX'
   - tagline: 'Zgodność prawna dla firm budowlanych: Prospekt, Cennik WWW, Portal Danych, MRP/DFG.'
-  - url: 'https://budolex.pl', baseUrl: '/'
+  - url: 'https://budolex.com', baseUrl: '/'
   - i18n: { defaultLocale: 'pl', locales: ['pl'] }
   - presets: preset-classic z: docs (opcjonalnie), blog: true, theme: customCss, sitemap: weekly
   - plugins:

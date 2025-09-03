@@ -9,6 +9,7 @@ import styles from './index.module.css';
 import TrustBar from '../components/TrustBar';
 import LeadCaptureForm from '../components/LeadCaptureForm';
 import ScrollAnimations from '../components/ScrollAnimations';
+import CookieConsent from '../components/CookieConsent';
 
 const FeaturesList = [
   {
@@ -22,18 +23,18 @@ const FeaturesList = [
     ),
   },
   {
-    title: 'Prospekty tworzone przez prawników',
+    title: 'Prospekty',
     icon: '📋',
     description: (
       <>
-        Nasz zespół prawników tworzy zgodne z prawem prospekty w formacie PDF/A
+        Nasz zespół tworzy zgodne z prawem prospekty w formacie PDF/A
         z pełnym wersjonowaniem i trwałym nośnikiem elektronicznym.
       </>
     ),
   },
   {
     title: 'Email z przekierowaniem',
-    icon: '�',
+    icon: '📧',
     description: (
       <>
         Obsługa email niewidoczna dla klientów - zapytania automatycznie
@@ -45,7 +46,7 @@ const FeaturesList = [
 
 function Feature({title, icon, description}) {
   return (
-    <div className={clsx('col col--3')}>
+    <div className={clsx('col col--4')}>
       <div className="feature-card">
         <div className="feature-icon">
           {icon}
@@ -71,19 +72,19 @@ function HomepageHeader() {
           BUDOLEX — strony WWW + prospekty + zgodność
         </h1>
         <p className="hero-subtitle">
-          Strony WWW z integracją gov.pl, prospekty tworzone przez prawników i
-          email z przekierowaniem — wszystko w jednym pakiecie.
+          Strony WWW z integracją gov.pl, prospekty i
+          email — wszystko w jednym pakiecie.
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
             to="#konsultacja">
-            Umów bezpłatną konsultację
+            Umów konsultację
           </Link>
           <Link
             className="button button--outline button--lg margin-left--md"
             to="/prawo-2025">
-            Pobierz przewodnik prawny 2025 (PDF)
+            Prawo 2025
           </Link>
         </div>
       </div>
@@ -95,7 +96,7 @@ function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center">
           {FeaturesList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
@@ -156,18 +157,16 @@ function ProcessSection() {
 
 function MiniCaseSection() {
   return (
-    <section className="padding-vert--xl" style={{backgroundColor: '#f8f9fa'}}>
+    <section className="padding-vert--xl case-study-section" style={{backgroundColor: '#f8f9fa'}}>
       <div className="container">
         <div className="row">
           <div className="col col--8 col--offset-2 text--center">
             <h2>Przypadek klienta</h2>
             <div className="feature-card">
-              <h3>SMB deweloper — wdrożenie w 10 dni, 0 uwag z UOKiK</h3>
+              <h3>AGADOM deweloper — wdrożenie w 10 dni, pełna automatyzacja</h3>
               <p>
-                Firma developerska z 15-osobowym zespołem sprzedaży, 
-                realizująca 3 inwestycje rocznie. Po błyskawicznym wdrożeniu BUDOLEX 
-                otrzymała pełną zgodność prawną bez jednej uwagi podczas 
-                kontroli UOKiK.
+                Firma developerska po błyskawicznym wdrożeniu BUDOLEX 
+                otrzymała pełną zgodność prawną i automatyzację procesów spełniając wymagania prawne.
               </p>
               <div style={{marginTop: '24px'}}>
                 <strong>Rezultat:</strong> Redukcja ryzyka prawnego o 95%, 
@@ -262,7 +261,7 @@ function FAQPreview() {
   ];
 
   return (
-    <section className="padding-vert--xl" style={{backgroundColor: '#f8f9fa'}}>
+    <section className="padding-vert--xl faq-section" style={{backgroundColor: '#f8f9fa'}}>
       <div className="container">
         <div className="row">
           <div className="col col--12 text--center margin-bottom--lg">
@@ -300,9 +299,9 @@ export default function Home(): React.JSX.Element {
     "@type": "LocalBusiness",
     "name": "BUDOLEX - AGADOM Sp. z o.o.",
     "description": "Strony WWW z integracją gov.pl, prospekty prawne i email z przekierowaniem dla deweloperów",
-    "url": "https://budolex.pl",
+    "url": "https://budolex.com",
     "telephone": "+48 502 091 059",
-    "email": "kontakt@budolex.pl",
+    "email": "kontakt@agadom.com.pl",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Elżbiety Drużbackiej 136",
@@ -354,7 +353,7 @@ export default function Home(): React.JSX.Element {
           <div className="container">
             <div className="row">
               <div className="col col--6">
-                <h2>Umów bezpłatną konsultację</h2>
+                <h2>Umów konsultację</h2>
                 <p className="hero-subtitle">
                   Porozmawiaj z naszym ekspertem o tym, jak BUDOLEX może 
                   zapewnić zgodność prawną Twojej firmie budowlanej.
@@ -368,6 +367,19 @@ export default function Home(): React.JSX.Element {
                 <p>
                   <strong>Konsultacja trwa 30 minut i jest całkowicie bezpłatna.</strong>
                 </p>
+                <div style={{ marginTop: '20px', padding: '15px', background: 'rgba(255, 183, 3, 0.1)', borderRadius: '8px', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+                  <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: 'var(--budolex-accent)' }}>
+                    🗓️ Zarezerwuj termin online:
+                  </p>
+                  <Link 
+                    to="https://calendly.com/adam-krawczyk0698/budolex-meet"
+                    target="_blank"
+                    className="button button--primary"
+                    style={{ marginRight: '10px' }}
+                  >
+                    Calendly - Umów spotkanie
+                  </Link>
+                </div>
               </div>
               <div className="col col--6">
                 <LeadCaptureForm />
@@ -376,6 +388,7 @@ export default function Home(): React.JSX.Element {
           </div>
         </section>
       </main>
+      <CookieConsent />
     </Layout>
   );
 }

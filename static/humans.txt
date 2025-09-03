@@ -2,8 +2,8 @@
 
 /* TEAM */
 Product Owner: BUDOLEX Team
-Contact: kontakt@budolex.pl
-Location: Warszawa, Polska
+Contact: kontakt@agadom.com.pl
+Location: Kraków, Polska
 
 /* THANKS */
 Docusaurus Community

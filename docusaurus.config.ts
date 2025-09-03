@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'BUDOLEX',
-  tagline: 'Strony WWW z integracją gov.pl, prospekty prawne i email z przekierowaniem dla deweloperów.',
+  tagline: 'Zgodność prawna dla firm budowlanych: Prospekt, Cennik WWW, Portal Danych, integracja gov.pl.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://budolex.pl',
+  url: 'https://budolex.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -85,7 +85,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: process.env.GA4_ID || 'G-XXXXXXXXXX',
+        trackingID: 'G-NJWJD8B4DV',
         anonymizeIP: true,
       },
     ],
@@ -94,6 +94,17 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/budolex-social-card.jpg',
+    headTags: [
+      // Google Tag Manager
+      {
+        tagName: 'script',
+        innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T44N59ZD');`,
+      },
+    ],
     metadata: [
       {
         name: 'description',
@@ -109,7 +120,7 @@ const config: Config = {
       },
     ],
     navbar: {
-      title: 'BUDOLEX',
+      title: '',
       logo: {
         alt: 'BUDOLEX Logo',
         src: 'img/logo.svg',

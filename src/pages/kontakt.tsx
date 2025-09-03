@@ -32,7 +32,7 @@ export default function Contact(): React.JSX.Element {
               <div style={{ marginBottom: '24px' }}>
                 <h4>📧 Email</h4>
                 <p>
-                  <a href="mailto:kontakt@budolex.pl">kontakt@budolex.pl</a><br />
+                  <a href="mailto:kontakt@agadom.com.pl">kontakt@agadom.com.pl</a><br />
                   <small>Odpowiadamy w ciągu 4 godzin roboczych</small>
                 </p>
               </div>
@@ -66,6 +66,29 @@ export default function Contact(): React.JSX.Element {
 
               <h3>📅 Umów spotkanie online</h3>
               <p>Wybierz dogodny termin na 30-minutową bezpłatną konsultację:</p>
+              
+              <div style={{ marginTop: '20px', padding: '20px', background: 'rgba(255, 183, 3, 0.1)', borderRadius: '12px', border: '1px solid rgba(255, 183, 3, 0.3)' }}>
+                <p style={{ margin: '0 0 15px 0', fontWeight: 'bold', color: 'var(--budolex-accent)' }}>
+                  🗓️ Zarezerwuj termin online:
+                </p>
+                <a 
+                  href="https://calendly.com/adam-krawczyk0698/budolex-meet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button--primary button--lg"
+                  style={{ marginRight: '10px', textDecoration: 'none' }}
+                >
+                  Calendly - Umów spotkanie
+                </a>
+                <p style={{ margin: '15px 0 0 0', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                  Kliknij link, aby przejść do kalendarza Calendly i wybrać dogodny termin.
+                </p>
+              </div>
+              
+              <div style={{ marginTop: '30px' }}>
+                <h4>📋 Lub wypełnij formularz</h4>
+                <p>Jeśli wolisz formularz kontaktowy, skorzystaj z poniższej opcji:</p>
+              </div>
               
               {/* Placeholder for calendar embed */}
               <div style={{ 

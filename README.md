@@ -1,6 +1,6 @@
 # BUDOLEX - Zgodność prawna dla firm budowlanych
 
-Strona internetowa BUDOLEX zbudowana w oparciu o Docusaurus 3.8.1. Zawiera kompletne rozwiązanie marketingowe dla firmy świadczącej usługi zgodności prawnej dla deweloperów.
+Strona internetowa BUDOLEX. Zawiera kompletne rozwiązanie marketingowe dla firmy świadczącej usługi zgodności prawnej dla deweloperów.
 
 ## ✨ Funkcjonalności
 
@@ -198,9 +198,8 @@ Edytuj zmienne CSS w `src/css/custom.css`:
 ## 📞 Wsparcie
 
 W przypadku problemów technicznych:
-- Email: dev@budolex.pl
+- Email: kontakt@agadom.com.pl
 - Issues w GitHub repository
-- Dokumentacja Docusaurus: https://docusaurus.io/
 
 ## 📄 Licencja
 
