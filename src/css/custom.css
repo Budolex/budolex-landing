@@ -585,6 +585,8 @@
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 /* Consultation section improvements */
@@ -762,6 +764,11 @@ html {
   align-items: center;
 }
 
+.hero-section .container {
+  position: relative;
+  z-index: 5;
+}
+
 .hero-section::before {
   content: '';
   position: absolute;
@@ -771,6 +778,8 @@ html {
   bottom: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
   animation: float 20s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-section::after {
@@ -782,6 +791,8 @@ html {
   height: 200%;
   background: radial-gradient(circle, rgba(255, 183, 3, 0.1) 0%, transparent 70%);
   animation: pulse 4s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
 }
 
 @keyframes float {
@@ -1232,6 +1243,20 @@ section .row.justify-content-center .col--4 {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(255, 183, 3, 0.6);
   }
+}
+
+/* Contact page specific fixes */
+[data-theme='light'] .container .feature-card,
+[data-theme='dark'] .container .feature-card {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Override fadeInUp for contact page */
+.container .fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* Scroll-based animations */

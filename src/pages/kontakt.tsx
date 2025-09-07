@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import LeadCaptureForm from '../components/LeadCaptureForm';
+import ScrollAnimations from '../components/ScrollAnimations';
 
 export default function Contact(): React.JSX.Element {
   return (
@@ -84,25 +85,6 @@ export default function Contact(): React.JSX.Element {
                   Kliknij link, aby przejść do kalendarza Calendly i wybrać dogodny termin.
                 </p>
               </div>
-              
-              <div style={{ marginTop: '30px' }}>
-                <h4>📋 Lub wypełnij formularz</h4>
-                <p>Jeśli wolisz formularz kontaktowy, skorzystaj z poniższej opcji:</p>
-              </div>
-              
-              {/* Placeholder for calendar embed */}
-              <div style={{ 
-                border: '2px dashed #ccc', 
-                padding: '40px', 
-                textAlign: 'center',
-                backgroundColor: '#f8f9fa',
-                borderRadius: '8px',
-                marginBottom: '24px'
-              }}>
-                <p><strong>Embed kalendarza Calendly</strong></p>
-                <p>Tutaj zostanie umieszczony widget kalendarza do rezerwacji spotkań</p>
-                <code>&lt;Calendly inline widget&gt;</code>
-              </div>
             </div>
           </div>
 
@@ -168,13 +150,13 @@ export default function Contact(): React.JSX.Element {
             }}>
               <h3>Potrzebujesz pilnej pomocy?</h3>
               <p>
-                Kontrola UOKiK już w przyszłym tygodniu? Problemy z eksportem do Portalu Danych? 
+                Problemy z eksportem do Portalu Danych? Brak zgodności z nowymi przepisami? 
                 Skontaktuj się z nami natychmiast.
               </p>
               <p>
                 <strong>Hotline awaryjny:</strong>{' '}
-                <a href="tel:+48987654321" style={{ color: '#ffb703' }}>
-                  +48 987 654 321
+                <a href="tel:+48502091051" style={{ color: '#ffb703' }}>
+                  +48 502 091 051
                 </a>
               </p>
               <small>Dostępny 24/7 dla klientów Pro i White-glove</small>
@@ -202,6 +184,7 @@ export default function Contact(): React.JSX.Element {
           </div>
         </div>
       </div>
+      <ScrollAnimations />
     </Layout>
   );
 }
