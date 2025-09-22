@@ -7,7 +7,6 @@ import Head from '@docusaurus/Head';
 
 import styles from './index.module.css';
 import TrustBar from '../components/TrustBar';
-import LeadCaptureForm from '../components/LeadCaptureForm';
 import ScrollAnimations from '../components/ScrollAnimations';
 import CookieConsent from '../components/CookieConsent';
 
@@ -253,10 +252,6 @@ function FAQPreview() {
     {
       question: 'Czy mogę anulować subskrypcję w każdym momencie?',
       answer: 'Tak, oferujemy elastyczne warunki anulacji z 30-dniowym okresem wypowiedzenia. Wszystkie dane pozostają dostępne przez 90 dni po anulacji.'
-    },
-    {
-      question: 'Co się stanie podczas kontroli UOKiK?',
-      answer: 'BUDOLEX zapewnia pełną dokumentację zgodności. W przypadku kontroli otrzymujesz wsparcie prawne i techniczne. Dotychczas żaden z naszych klientów nie otrzymał kary.'
     }
   ];
 
@@ -382,7 +377,44 @@ export default function Home(): React.JSX.Element {
                 </div>
               </div>
               <div className="col col--6">
-                <LeadCaptureForm />
+                <div className="feature-card">
+                  <h3>📞 Skontaktuj się z nami</h3>
+                  
+                  <div style={{ marginBottom: '24px' }}>
+                    <h4>📧 Email</h4>
+                    <p>
+                      <a href="mailto:kontakt@agadom.com.pl" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>kontakt@agadom.com.pl</a><br />
+                      <small>Odpowiadamy w ciągu 4 godzin roboczych</small>
+                    </p>
+                  </div>
+
+                  <div style={{ marginBottom: '24px' }}>
+                    <h4>📞 Telefon</h4>
+                    <p>
+                      <a href="tel:+48502091059" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>+48 502 091 059</a><br />
+                      <small>Pon-Pt: 9:00-17:00</small>
+                    </p>
+                  </div>
+
+                  <div style={{ marginBottom: '24px' }}>
+                    <h4>🏢 Adres</h4>
+                    <p>
+                      AGADOM Sp. z o.o.<br />
+                      Elżbiety Drużbackiej 136<br />
+                      30-699 Kraków<br />
+                      <small>NIP: 6793287174 | KRS: 0001078988</small>
+                    </p>
+                  </div>
+
+                  {/* <div className="text--center margin-top--md">
+                    <Link 
+                      to="/kontakt"
+                      className="button button--outline button--lg"
+                    >
+                      Kontakt
+                    </Link>
+                  </div> */}
+                </div>
               </div>
             </div>
           </div>

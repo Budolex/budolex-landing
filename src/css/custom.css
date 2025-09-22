@@ -6,6 +6,102 @@
 
 /* BUDOLEX Color Palette */
 :root {
+  /* Cookie Consent Styling with BUDOLEX theme */
+.cc-window {
+  font-family: var(--ifm-font-family-base) !important;
+  border-radius: 12px 12px 0 0 !important;
+  border-top: 3px solid var(--ifm-color-accent) !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.cc-window.cc-banner {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%) !important;
+  border-top: 3px solid var(--ifm-color-accent) !important;
+}
+
+.cc-message {
+  color: white !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+.cc-btn {
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.cc-allow {
+  background: var(--ifm-color-accent) !important;
+  color: #000 !important;
+}
+
+.cc-allow:hover {
+  background: var(--ifm-color-accent-dark) !important;
+  transform: translateY(-1px) !important;
+}
+
+.cc-deny {
+  background: transparent !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  margin-right: 10px !important;
+}
+
+.cc-deny:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.cc-link {
+  color: var(--ifm-color-accent) !important;
+  text-decoration: underline !important;
+}
+
+.cc-link:hover {
+  color: var(--ifm-color-accent-light) !important;
+}
+
+.cc-revoke {
+  background: var(--ifm-color-primary) !important;
+  border: 1px solid var(--ifm-color-accent) !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+}
+
+.cc-revoke:hover {
+  background: var(--ifm-color-primary-dark) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cc-window {
+    padding: 16px !important;
+  }
+  
+  .cc-message {
+    font-size: 0.9rem !important;
+  }
+  
+  .cc-compliance {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .cc-btn {
+    width: 100% !important;
+    margin: 4px 0 !important;
+  }
+}
+
+/* Force dark theme as default */
+  --docusaurus-use-system-theme: false;
+  
   --ifm-color-primary: #0e5a8a;
   --ifm-color-primary-dark: #0c4e78;
   --ifm-color-primary-darker: #0b4a71;
@@ -427,6 +523,12 @@
 
 .cookie-settings-link:hover {
   color: #ffc530;
+}
+
+/* Ensure dark theme is truly default */
+html:not([data-theme]),
+html[data-theme='dark'] {
+  --ifm-color-mode: dark;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -1067,7 +1169,7 @@ section .row.justify-content-center .col--4 {
   box-shadow: 0 0 0 3px rgba(14, 90, 138, 0.1);
 }
 
-/* Responsive Design */
+/* Mobile responsive fixes */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.8rem;
@@ -1075,6 +1177,20 @@ section .row.justify-content-center .col--4 {
   
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+  
+  /* Fix hero buttons text wrapping on mobile */
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .buttons .button {
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 12px 16px;
+    line-height: 1.4;
   }
   
   .features-grid {
@@ -1243,6 +1359,40 @@ section .row.justify-content-center .col--4 {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(255, 183, 3, 0.6);
   }
+}
+
+/* FAQ section specific styling */
+.faq-section .feature-card {
+  padding: 24px;
+  min-height: auto;
+  height: auto;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.faq-section .feature-card h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.faq-section .feature-card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Fix FAQ button visibility in light theme */
+[data-theme='light'] .faq-section .button--outline {
+  border-color: var(--budolex-primary);
+  color: var(--budolex-primary);
+  background-color: transparent;
+}
+
+[data-theme='light'] .faq-section .button--outline:hover {
+  background-color: var(--budolex-primary);
+  color: white;
+  border-color: var(--budolex-primary);
 }
 
 /* Contact page specific fixes */

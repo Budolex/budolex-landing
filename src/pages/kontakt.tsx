@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-import LeadCaptureForm from '../components/LeadCaptureForm';
 import ScrollAnimations from '../components/ScrollAnimations';
 
 export default function Contact(): React.JSX.Element {
@@ -26,27 +25,27 @@ export default function Contact(): React.JSX.Element {
         </div>
 
         <div className="row">
-          <div className="col col--6">
-            <div className="feature-card">
+          <div className="col col--8 col--offset-2">
+            <div className="feature-card text--center">
               <h2>Dane kontaktowe</h2>
               
-              <div style={{ marginBottom: '24px' }}>
+              <div style={{ marginBottom: '32px' }}>
                 <h4>📧 Email</h4>
                 <p>
-                  <a href="mailto:kontakt@agadom.com.pl">kontakt@agadom.com.pl</a><br />
+                  <a href="mailto:kontakt@agadom.com.pl" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>kontakt@agadom.com.pl</a><br />
                   <small>Odpowiadamy w ciągu 4 godzin roboczych</small>
                 </p>
               </div>
 
-              <div style={{ marginBottom: '24px' }}>
+              <div style={{ marginBottom: '32px' }}>
                 <h4>📞 Telefon</h4>
                 <p>
-                  <a href="tel:+48502091059">+48 502 091 059</a><br />
+                  <a href="tel:+48502091059" style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>+48 502 091 059</a><br />
                   <small>Pon-Pt: 9:00-17:00</small>
                 </p>
               </div>
 
-              <div style={{ marginBottom: '24px' }}>
+              <div style={{ marginBottom: '32px' }}>
                 <h4>🏢 Adres</h4>
                 <p>
                   AGADOM Sp. z o.o.<br />
@@ -86,10 +85,6 @@ export default function Contact(): React.JSX.Element {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="col col--6">
-            <LeadCaptureForm />
           </div>
         </div>
 
