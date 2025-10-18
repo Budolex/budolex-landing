@@ -211,7 +211,7 @@ function PricingPreview() {
             <div className="price-card featured">
               <h3>Standard</h3>
               <div style={{fontSize: '1.8rem', fontWeight: 'bold', margin: '16px 0'}}>
-                12,000 zł<span style={{fontSize: '1rem', display: 'block'}}>+ 400 zł/mies</span>
+                12,000 zł<span style={{fontSize: '1rem', display: 'block'}}>+ 200 zł/mies</span>
               </div>
               <p>Kompletny pakiet z rabatem 20% wliczonym</p>
               <ul style={{textAlign: 'left', margin: '16px 0'}}>
