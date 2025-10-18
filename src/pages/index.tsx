@@ -86,6 +86,21 @@ function HomepageHeader() {
             Prawo 2025
           </Link>
         </div>
+        <div className="compliance-logos">
+          <p className="compliance-caption">Zgodność z:</p>
+          <div className="logos-container">
+            <img 
+              src="/img/gov_pl.png" 
+              alt="gov.pl" 
+              className="compliance-logo"
+            />
+            <img 
+              src="/img/ministerstwo_infrastruktury.png" 
+              alt="Ministerstwo Infrastruktury" 
+              className="compliance-logo"
+            />
+          </div>
+        </div>
       </div>
     </header>
   );
@@ -201,7 +216,7 @@ function PricingPreview() {
               <p>Kompletny pakiet z rabatem 20% wliczonym</p>
               <ul style={{textAlign: 'left', margin: '16px 0'}}>
                 <li>🌐 Dedykowana strona WWW</li>
-                <li>📋 Prospekt przez prawników</li>
+                <li>📋 Prospekt budowlany</li>
                 <li>📧 Email z przekierowaniem</li>
                 <li>👤 Dedykowany opiekun</li>
                 <li>⚡ Wsparcie SLA 4h</li>

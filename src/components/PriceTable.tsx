@@ -14,7 +14,7 @@ interface PricePlan {
 const plans: PricePlan[] = [
   {
     name: 'Standard',
-    price: '12,000 zł + 400 zł/mies',
+    price: '12,000 zł + 200 zł/mies',
     description: 'Kompletny pakiet dla każdej inwestycji - rabat 20% wliczony',
     features: [
       '🌐 Strona WWW z integracją gov.pl dla inwestycji',
